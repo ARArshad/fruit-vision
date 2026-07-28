@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FruitVision</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>FruitVision</h1>
+        <p>Upload a fruit image to receive AI-powered predictions.</p>
+      </header>
+      <main>
+        <form id="upload-form">
+          <label for="file-input" class="upload-label">
+            Choose an image
+            <input id="file-input" type="file" accept="image/*" required />
+          </label>
+          <button type="submit">Predict</button>
+        </form>
+        <div id="preview" class="preview hidden">
+          <img id="preview-img" alt="Fruit preview" />
+        </div>
+        <div id="result" class="result hidden"></div>
+      </main>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
