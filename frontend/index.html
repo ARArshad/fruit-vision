@@ -7,25 +7,25 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="container">
-      <header>
-        <h1>FruitVision</h1>
-        <p>Upload a fruit image to receive AI-powered predictions.</p>
-      </header>
-      <main>
-        <form id="upload-form">
-          <label for="file-input" class="upload-label">
-            Choose an image
-            <input id="file-input" type="file" accept="image/*" required />
-          </label>
-          <button type="submit">Predict</button>
-        </form>
-        <div id="preview" class="preview hidden">
-          <img id="preview-img" alt="Fruit preview" />
-        </div>
-        <div id="result" class="result hidden"></div>
-      </main>
+    <div class="page">
+      <h1 class="title">FruitVision</h1>
+      <p class="subtitle">Upload a fruit image to receive AI-powered predictions.</p>
+
+      <div class="card">
+        <input id="file-input" type="file" accept="image/*" hidden />
+        <button id="choose-btn" type="button" class="choose-btn">Choose an image</button>
+        <button id="predict-btn" type="button" class="predict-btn" disabled>Predict</button>
+
+        <img id="preview-img" class="preview hidden" alt="Selected fruit" />
+
+        <div id="result" class="result-box hidden"></div>
+      </div>
+
+      <footer>
+        <span id="model-info">Checking model&hellip;</span>
+      </footer>
     </div>
+
     <script src="app.js"></script>
   </body>
 </html>
