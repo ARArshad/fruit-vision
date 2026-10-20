@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FruitVision · Fruit recognition in your browser</title>
+    <meta name="description" content="Upload a fruit photo and a neural network written from scratch recognises it, right in your browser. 16 fruits, no upload, no server." />
+    <meta property="og:title" content="FruitVision · Fruit recognition in your browser" />
+    <meta property="og:description" content="A neural network written from scratch recognises 16 fruits, right in your browser." />
+    <meta name="theme-color" content="#2b6e2f" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='36' r='22' fill='%23d62f2f'/%3E%3Cpath d='M32 14c4-8 12-9 16-8-2 6-8 10-16 8z' fill='%232b6e2f'/%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="top">
+        <h1 class="title">FruitVision</h1>
+        <p class="subtitle">Upload a fruit photo and a neural network written from scratch tells you what it is. Everything runs in your browser: the photo never leaves your device.</p>
+      </header>
+
+      <main class="card">
+        <input id="file-input" type="file" accept="image/*" hidden />
+        <button id="choose-btn" type="button" class="choose-btn">Choose an image</button>
+
+        <div class="samples">
+          <p class="samples__label">Or try a sample</p>
+          <div class="samples__list" id="samples">
+            <button type="button" class="sample" data-src="samples/apple_4.jpg" aria-label="Try the apple sample"><img src="samples/apple_4.jpg" alt="" /></button>
+            <button type="button" class="sample" data-src="samples/banana_1.jpg" aria-label="Try the banana sample"><img src="samples/banana_1.jpg" alt="" /></button>
+            <button type="button" class="sample" data-src="samples/strawberry_1.jpg" aria-label="Try the strawberry sample"><img src="samples/strawberry_1.jpg" alt="" /></button>
+            <button type="button" class="sample" data-src="samples/pineapple_1.jpg" aria-label="Try the pineapple sample"><img src="samples/pineapple_1.jpg" alt="" /></button>
+            <button type="button" class="sample" data-src="samples/watermelon_1.jpg" aria-label="Try the watermelon sample"><img src="samples/watermelon_1.jpg" alt="" /></button>
+            <button type="button" class="sample" data-src="samples/lemon_2.jpg" aria-label="Try the lemon sample"><img src="samples/lemon_2.jpg" alt="" /></button>
+          </div>
+        </div>
+
+        <button id="predict-btn" type="button" class="predict-btn" disabled>Predict</button>
+
+        <img id="preview-img" class="preview hidden" alt="Selected fruit" />
+
+        <div id="result" class="result-box hidden" aria-live="polite"></div>
+      </main>
+
+      <footer>
+        <p id="model-info">Loading the model&hellip;</p>
+        <p class="footer__links">
+          <a href="https://github.com/ARArshad/fruit-vision" target="_blank" rel="noopener">Source on GitHub</a>
+          <span aria-hidden="true">·</span>
+          <a href="https://ararshad.github.io/">Built by AliRehman Arshad</a>
+        </p>
+      </footer>
+    </div>
+
+    <script src="model.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

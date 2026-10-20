@@ -1,0 +1,23 @@
+{
+  "classes": [
+    "Apple",
+    "Avocado",
+    "Banana",
+    "Cherry",
+    "Grape",
+    "Kiwi",
+    "Lemon",
+    "Lime",
+    "Mango",
+    "Orange",
+    "Peach",
+    "Pear",
+    "Pineapple",
+    "Pomegranate",
+    "Strawberry",
+    "Watermelon"
+  ],
+  "parameters": 67416,
+  "test_accuracy": 0.9155313351498637,
+  "test_images": 367
+}
